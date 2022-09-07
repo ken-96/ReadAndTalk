@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read & Talk</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/nav.ejs') -%>
+  <section class="page-others">
+    <section class="page-club">
+    
+      <h1 class='club-name'><%= club.name %></h1>
+      <section class='members-group'>
+        <h4>Members:</h4>
+        <h4 class='members-num'><%= numMembers %></h4>
+        
+        <img class='user-pic' src="../img/bookclub-user4.jpg" alt="Raquel Green">
+        <img class='user-pic' src="../img/bookclub-user5.jpg" alt="Ken Adams">
+        <img class='user-pic' src="../img/bookclub-user6.jpg" alt="Regina Phalange">
+        <img class='user-pic' src="../img/bookclub-more.png" alt="click to see more">
+      </section>
+      
+      <h4>Current book</h4>
+      <h2><%= club.book %></h2>
+      <p><%= club.description %></p>
+      
+      <p>Book Rating: <%= club.ratingScore %> / 5</p>
+      <p># of votes: <%= club.raters.length %></p>
+      <% console.log('hi', club.raters) %>
+      <% if(club.members.includes(userId) && !club.raters.includes(userId)){%>
+        <div>
+          <h4>Rate this book 1-5:</h4>
+          <select name='rating'>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+          </select>
+          <button data-id="<%=userId%>" id='rate'>submit rating</button>
+        </div>
+      <%}%>
+        <script type="text/javascript" src="//books.google.com/books/previewlib.js"></script>
+  
+        <script type="text/javascript">
+      // GBS_insertPreviewButtonPopup(`ISBN:${<%= club.isbn %>}`);
+        </script>
+    <% if(club.userId === userId){%>
+      <button><a href="/editClub/<%= club._id%>">Edit Club</a></button>
+    <%}%>
+    <% if(!isMember){%>
+      <button class='button-club btn' data-id="<%=userId%>" id='join'>Join Club</button>
+    <%}else if(club.userId != userId){%>
+      <button class='button-club btn' data-id="<%=userId%>" id='unjoin'>Leave Club</button>
+    <%}%>
+      <script src="/js/joinClub.js"></script>
+
+
+      <section class="comments">
+          <h4 class='comments-header'>Comments:</h4>
+        
+          <section class='comment'>
+            <section class='comment-user'>
+              <img class='user-pic' src="../img/bookclub-user1.jpg" alt="Raquel Green">
+              <p class='comment-username'>Raquel Green</p>
+            </section>
+            <p class='comment-txt'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum consequatur facilis dolore perspiciatis molestiae? Nemo perspiciatis rerum aperiam beatae reiciendis, eos ducimus fuga. Rem doloremque exercitationem nemo atque officiis eligendi?</p>
+          </section>
+        
+          <section class='comment'>
+            <section class='comment-user'>
+              <img class='user-pic' src="../img/bookclub-user2.jpg" alt="Regina Phalange">
+              <p class='comment-username'>Regina Phalange</p>
+            </section>
+            <p class='comment-txt'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem doloremque exercitationem nemo atque officiis eligendi?</p>
+          </section>
+        
+          <section class='comment'>
+            <section class='comment-user'>
+              <img class='user-pic' src="../img/bookclub-user3.jpg" alt="Ken Adams">
+              <p class='comment-username'>Ken Adams</p>
+            </section>
+            <p class='comment-txt'>Ipsum consequatur facilis dolore perspiciatis molestiae? Nemo perspiciatis rerum aperiam beatae reiciendis, eos ducimus fuga. Rem doloremque exercitationem nemo atque officiis eligendi.</p>
+          </section>
+        
+      </section>
+    </section>
+  </section>
+</body>
+</html>

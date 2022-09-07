@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+} 
+
+body { 
+  position: relative;
+}
+
+/* //////////////////////////// */
+/* config */
+
+
+/* //////////////////////////// */
+/* general */
+
+h1 {
+  font-size: 5rem;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.btn {
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-x {
+  margin-left: 34rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  border: white solid 1px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.btn-x:hover {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+
+/* //////////////////////////// */
+/* pages: main - login - signup */
+
+.page-main {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  top: 40%;
+  
+  background: url(../img/bookclub-bg-main.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.title-main {
+  margin-bottom: 2rem;  
+}
+
+.header-main {
+  font-size: 10rem;
+  font-weight: 100;
+  color: white;
+}
+
+.sub-main {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.button-main {
+  margin: 0.2rem;
+  border: rgba(215, 241, 113, 1) 0.2rem solid;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(215, 241, 113, 0.8);
+  border-radius: 0.5rem;
+  display:inline-block;
+  min-width: 20rem;
+}
+
+.button-main:hover,
+.button-main:active {
+  background: rgba(215, 241, 113, 1);
+}
+
+.page-login {
+  align-items: center;
+  position: relative;
+}
+
+.form-login {
+  background: rgba(129, 126, 159, 0.8);
+  border: white 1px solid;
+  border-radius: 1rem;
+  padding: 5rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 30rem;
+  width: 20%;
+  transition: all 0.3s ease;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
+  
+}
+
+.form-login:hover {
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.0);
+}
+
+.inputs-main {
+  margin-bottom: 1rem;
+}
+
+.input-main {
+  padding: 1rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  transition: all 0.3s ease;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: none;
+  background: rgba(79, 78, 106, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+}
+
+.input-main::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 100;
+}
+
+.input-main:hover {
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.5);
+}
+.input-main:focus {
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
+  background: transparent;
+}
+
+#quotes {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: right;
+}
+
+#quote-txt {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.5);
+/*   font-weight: 100; */
+/*   font-size: 1.4rem; */
+}
+
+#quote-author {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+/*   font-weight: 100; */
+/*   font-size: 1.4rem; */
+}
+
+
+/* //////////////////////////// */
+/* pages: others - clubs */
+.page-others {
+  margin: 0 auto;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 1);
+}
+
+.page-clubs {
+  height: 100vh;
+  background: white;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.1);
+}
+
+.page-club {
+  height: 100vh;
+  background: white;
+}
+
+.club-name {
+  padding-top: 10rem;
+/*   background: rgba(181, 239, 138, 1); */
+  color: white;
+  text-align: right;
+  
+  background: url(../img/bookclub-bg-club.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.button-club {
+  margin: 0.2rem;
+  color: rgba(255, 255, 255, 1);
+/*   border: rgba(215, 241, 113, 1) 0.2rem solid; */
+/*   background: rgba(215, 241, 113, 0.8); */
+  border: rgba(115, 114, 151, 1) 0.2rem solid;
+  background: rgba(115, 114, 151, 0.5);
+  border-radius: 0.5rem;
+  display:inline-block;
+  min-width: 20rem;
+  align-self: right;
+}
+
+.button-club:hover,
+.button-club:active {
+  background: rgba(115, 114, 151, 1);
+  color: white;
+  
+}
+
+.members-group {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.members-num {
+  padding: 0.3rem 0.9rem;
+  border-radius: 50%;
+  background: rgba(115, 114, 151, 0.5);
+  border: rgba(115, 114, 151, 1) 1px solid;
+  
+  color: white;
+}
+
+.user-pic {
+  width: 3rem; 
+  height: 3rem; 
+  object-fit: cover;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.user-pic:hover {
+  filter: brightness(1.2);
+}
+
+.comments {
+  margin-top: 2rem;
+}
+
+.comment {
+  margin-top: 1rem;
+}
+
+.comments-header {
+  color: rgba(115, 114, 151, 1);
+}
+
+.comment-user {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.comment-username {
+  font-weight: 700;
+  padding-left: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgba(115, 114, 151, 1);
+}
+
+.comment-username:hover {
+  color: rgba(115, 114, 151, 0.6);
+}
+
+.comment-txt {
+  padding: 1rem 1rem 4rem 1rem;
+/*   margin: 0.5rem 0; */
+  background: rgba(115, 114, 151, 0.1);
+  color: rgba(115, 114, 151, 0.8);
+  
+  border-radius: 0.5rem;
+}
+
+
+
+/* //////////////////////////// */
+/* navigation bar */
+
+/* Add a black background color to the top navigation */
+.topnav {
+/*   background-color: #333; */
+/*   position: relative; */
+  overflow: hidden;
+}
+
+#logo {
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+
+}
+
+#logo img {
+  border-radius: 50%;
+  width: 3rem; 
+  height: 3rem;
+  transition: all 0.3s ease;
+}
+
+#logo img:hover {
+  filter: brightness(1.2);
+}
+
+/* 
+#logo span {
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+}
+ */
+
+#menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 70%;
+  right: 25%;
+  transform: translate(-50%, -50%);
+}
+
+#menu img {
+  margin-top: 1rem;
+  border-radius: 50%;
+  width: 3rem; 
+  height: 3rem;
+  transition: all 0.3s ease;
+}
+
+#menu img:hover {
+  filter: brightness(1.1);
+}
+
+
+/* Style the links inside the navigation bar */
+/* .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 36px;
+} */
+
+/* Change the color of links on hover */
+/* .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+
+/* Add a color to the active/current link */
+/* .topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+} 
+
+.topnav img{
+  max-width: 75px;
+  max-height: 75px;
+} */

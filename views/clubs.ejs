@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read & Talk</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <%- include('partials/nav.ejs') -%>
+  <section class="page-others">
+    <section class="page-clubs">
+      <h1>Create your own club</h1>
+      <button><a href="/createClub">Create</a></button>
+      <h1>Your current clubs</h1>
+      <% for( let i = 0; i < myClubs.length; i++ ) { %>
+        <div>
+          <h2><%= myClubs[i].name %></h2>
+          <p><%= myClubs[i].description %></p>
+          <button><a href="/clubs/myClubs/<%= myClubs[i]._id %>">View Club</a></button>
+        </div>
+      <%}%>
+      
+      <h1>Or choose a club to join</h1>
+      <% for( let i = 0; i < clubs.length; i++ ) { %>
+        <div>
+          <h2><%= clubs[i].name %></h2>
+          <p><%= clubs[i].description %></p>
+          <button><a href="/clubs/<%= clubs[i]._id %>">View Club</a></button>
+        </div>
+      <% } %>
+        
+    </section>
+  </section>
+</body>
+</html> 

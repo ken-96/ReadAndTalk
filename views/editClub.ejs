@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read & Talk</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<!--   <form action='/editClub/editClub/<%=id%>' method='PUT'> -->
+  <%- include('partials/nav.ejs') -%>
+  <div>
+  
+    <input id='name' type='text' placeholder="Edit Club Name" name='name'>
+    <input id='book' type='text' placeholder='Edit book club' name='book'>
+    <input id='description' type='text' placeholder='Edit description' name='description'>
+    <input id='isbn' type='text' placeholder='Edit isbn' name='isbn'>
+    <input data-id='<%=id%>' id='update' type='submit'>
+  </div>
+<!--   </form> -->
+  <button data-id='<%=id%>' id="deleteClub">Delete club</button>
+  <script src="/js/editClub.js"></script>
+</body>
+</html>
+
